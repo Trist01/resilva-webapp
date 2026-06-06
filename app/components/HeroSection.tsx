@@ -22,7 +22,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <div className="min-h-[100dvh] relative overflow-hidden flex flex-col text-white">
+    <div className="h-screen relative overflow-hidden flex flex-col text-white">
       {/* Parallax background — driven by scroll listener */}
       <div
         ref={bgRef}
@@ -58,19 +58,21 @@ export function HeroSection() {
       </nav>
 
       {/* Hero content */}
-      <section className="relative z-10 flex-1 flex flex-col justify-between px-8 pt-50 pb-14 md:px-12">
-        <h2
-          className="font-extrabold leading-[0.92] tracking-tight [text-shadow:_0_2px_20px_rgba(0,0,0,0.5)]"
-          style={{ fontSize: "clamp(2.5rem, 4.5vw, 4.5rem)" }}
-        >
-          We plant trees and bushes.
-          <br />
-          You follow them.
-          <br />
-          <span className="text-fern">Down to the roots.</span>
-        </h2>
+      <section className="relative z-10 flex-1 flex flex-col px-8 pb-20 md:pb-14 md:px-12">
+        <div className="flex-1 flex items-center">
+          <h2
+            className="font-extrabold leading-[0.92] tracking-tight [text-shadow:_0_2px_20px_rgba(0,0,0,0.5)]"
+            style={{ fontSize: "clamp(2.5rem, 4.5vw, 4.5rem)" }}
+          >
+            We plant trees and bushes.
+            <br />
+            You follow them.
+            <br />
+            <span className="text-fern">Down to the roots.</span>
+          </h2>
+        </div>
 
-        <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-10 mt-8 md:mt-0">
+        <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-10">
           <div className="flex flex-col sm:flex-row gap-4 shrink-0 w-full lg:w-auto md:ml-auto">
             <BecomeARewiIderButton variant="primary" />
             <ButtonLink href="#approach" variant="secondary">

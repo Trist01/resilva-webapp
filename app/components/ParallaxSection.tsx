@@ -23,7 +23,7 @@ export function ParallaxSection({ src, children }: ParallaxSectionProps) {
   }, []);
 
   return (
-    <div className="min-h-[100dvh] relative overflow-hidden flex items-center justify-center">
+    <div className="h-screen relative overflow-hidden flex items-center justify-center">
       <div
         ref={bgRef}
         className="absolute inset-0 bg-cover bg-no-repeat bg-center will-change-transform"
@@ -33,9 +33,7 @@ export function ParallaxSection({ src, children }: ParallaxSectionProps) {
         }}
       />
       {children && (
-        <div className="relative z-10 px-8 text-center">
-          {children}
-        </div>
+        <div className="relative z-10 px-8 text-center">{children}</div>
       )}
     </div>
   );

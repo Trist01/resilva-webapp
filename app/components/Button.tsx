@@ -5,7 +5,7 @@ type Variant = "primary" | "secondary";
 const styles = (variant: Variant) =>
   [
     "inline-flex items-center justify-center",
-    "px-8 py-4 font-extrabold text-lg md:text-xl tracking-[0.25em] uppercase",
+    "px-8 py-4 font-extrabold text-[0.9rem] md:text-xl tracking-[0.25em] uppercase",
     "transition-colors duration-200",
     variant === "primary"
       ? "bg-sage text-mist hover:bg-forest"
