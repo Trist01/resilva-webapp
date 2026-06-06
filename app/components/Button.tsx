@@ -16,6 +16,7 @@ const styles = (variant: Variant) =>
 interface ButtonLinkProps {
   href: string;
   variant?: Variant;
+  target?: "_self" | "_blank";
   children: React.ReactNode;
   className?: string;
 }
@@ -23,12 +24,14 @@ interface ButtonLinkProps {
 export function ButtonLink({
   href,
   variant = "primary",
+  target,
   children,
   className,
 }: ButtonLinkProps) {
   return (
     <Link
       href={href}
+      target={target}
       className={[styles(variant), className].filter(Boolean).join(" ")}
     >
       {children}

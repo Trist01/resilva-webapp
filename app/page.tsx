@@ -390,6 +390,7 @@ export default function Home() {
               <div>
                 <ButtonLink
                   href="https://calendly.com/re-silva/30min"
+                  target="_blank"
                   variant="secondary"
                 >
                   Get in touch

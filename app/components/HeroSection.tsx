@@ -33,15 +33,7 @@ export function HeroSection() {
       {/* Navigation */}
       <nav className="relative z-10 flex items-start justify-between px-8 py-7 md:px-12">
         <div>
-          <Image
-            src="/branding/resilva.webp"
-            alt="RE:SILVA"
-            width={643}
-            height={666}
-            className="w-20 md:w-35 opacity-0"
-            style={{ height: "auto" }}
-            priority
-          />
+          <h1 className="text-4xl font-bold">RE:SILVA</h1>
         </div>
         <div className="hidden md:flex items-center gap-10 font-bold tracking-[0.18em] lowercase lg:text-lg [text-shadow:_0_1px_6px_rgba(0,0,0,0.5)]">
           <Link
@@ -66,17 +58,17 @@ export function HeroSection() {
       </nav>
 
       {/* Hero content */}
-      <section className="relative z-10 flex-1 flex flex-col justify-between px-8 pt-6 pb-14 md:px-12 md:pt-16">
-        <h1
+      <section className="relative z-10 flex-1 flex flex-col justify-between px-8 pt-50 pb-14 md:px-12">
+        <h2
           className="font-extrabold leading-[0.92] tracking-tight [text-shadow:_0_2px_20px_rgba(0,0,0,0.5)]"
-          style={{ fontSize: "clamp(2rem, 4.5vw, 4.5rem)" }}
+          style={{ fontSize: "clamp(2.5rem, 4.5vw, 4.5rem)" }}
         >
           We plant trees and bushes.
           <br />
           You follow them.
           <br />
           <span className="text-fern">Down to the roots.</span>
-        </h1>
+        </h2>
 
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-10 mt-8 md:mt-0">
           <div className="flex flex-col sm:flex-row gap-4 shrink-0 w-full lg:w-auto md:ml-auto">
