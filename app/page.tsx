@@ -20,7 +20,7 @@ const whyItems = [
   {
     icon: faMagnifyingGlassChart,
     title: "No bullshit, just data.",
-    body: "Every tree has an ID. A location. A growth curve. Everything public. Always. No glossy brochure required — the numbers speak for themselves.",
+    body: "Every plot of land has an ID. A location. A growth curve. Everything public. Always. No glossy brochure required — the numbers speak for themselves.",
   },
   {
     icon: faSeedling,
@@ -43,7 +43,7 @@ const approachSteps = [
   {
     number: "03",
     title: "Monitoring",
-    body: "Satellites, sensors, field measurements, AI. Every tree has an ID. Everything on the dashboard. Live, public, for everyone.",
+    body: "Satellites, sensors, field measurements, AI. Every plot of land has an ID. Everything on the dashboard. Live, public, for everyone.",
   },
   {
     number: "04",
@@ -69,8 +69,8 @@ export default function Home() {
           <div className="md:w-1/2 space-y-5 text-lg md:text-xl leading-relaxed text-ink/75">
             <p>
               Most "green" projects are a black box. You donate, you get a
-              certificate, that's it. Not here. Every tree has an ID. A GPS
-              location. Photos. A growth curve you can check live. Become a
+              certificate, that's it. Not here. Every plot of land has an ID. A
+              GPS location. Photos. A growth curve you can check live. Become a
               rewilder and see exactly what's growing.
             </p>
           </div>

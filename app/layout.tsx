@@ -22,7 +22,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "RE:SILVA — Real trees. Real transparency.",
   description:
-    "RE:SILVA restores depleted land. Every tree has an ID, a GPS location, photos and a live growth curve you can follow.",
+    "RE:SILVA restores depleted land. Every plot of land has an ID, a GPS location, photos and a live growth curve you can follow.",
 };
 
 export default function RootLayout({
