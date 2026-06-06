@@ -7,6 +7,9 @@ import {
   faSeedling,
 } from "@awesome.me/kit-f3ebbf3b73/icons/sharp/solid";
 import { ButtonLink } from "./components/Button";
+import { BecomeARewiIderButton } from "./components/BecomeARewiIderButton";
+import { HeroSection } from "./components/HeroSection";
+import { ParallaxSection } from "./components/ParallaxSection";
 
 const whyItems = [
   {
@@ -51,128 +54,85 @@ const approachSteps = [
 
 export default function Home() {
   return (
-    <main className="bg-cream text-forest flex flex-col">
-      <div className="min-h-[100dvh] flex flex-col">
-        {/* Navigation */}
-        <nav className="flex items-start justify-between px-8 py-7 md:px-12">
-          <Image
-            src="/branding/resilva.webp"
-            alt="RE:SILVA"
-            width={643}
-            height={666}
-            className="w-20 md:w-35"
-            style={{ height: "auto" }}
-            priority
-          />
-          <div className="hidden md:flex items-center gap-10 font-medium tracking-[0.18em] lowercase text-forest lg:text-lg">
-            <Link
-              href="#story"
-              className="hover:text-forest transition-colors duration-200"
-            >
-              Our story
-            </Link>
-            <Link
-              href="#approach"
-              className="hover:text-forest transition-colors duration-200"
-            >
-              Our approach
-            </Link>
-            <Link
-              href="#involved"
-              className="hover:text-forest transition-colors duration-200"
-            >
-              Get involved
-            </Link>
-          </div>
-        </nav>
+    <main className="bg-mist text-ink flex flex-col">
+      <HeroSection />
 
-        {/* Hero */}
-        <section className="flex-1 flex flex-col justify-between px-8 pt-6 pb-14 md:px-12 md:pt-16 md:pb-20">
-          <h1
-            className="font-extrabold leading-[0.92] tracking-tight text-forest"
-            style={{ fontSize: "clamp(2.6rem, 5.85vw, 5.85rem)" }}
+      {/* Our Story — Intro — mist bg */}
+      <section id="story" className="bg-mist text-ink px-8 py-20 md:px-12">
+        <div className="flex flex-col md:flex-row md:items-start gap-10 md:gap-16">
+          <h2
+            className="font-extrabold leading-[0.88] tracking-tight text-forest md:w-1/2 shrink-0"
+            style={{ fontSize: "clamp(2rem, 4.5vw, 4.5rem)" }}
           >
-            We plant trees and bushes.
-            <br />
-            You follow them.
-            <br />
-            <span className="text-tan">Down to the roots.</span>
-          </h1>
-
-          <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-10 mt-8 md:mt-0">
-            <p className="max-w-lg text-base md:text-lg leading-relaxed text-forest/70">
+            The RE:SILVA way.
+          </h2>
+          <div className="md:w-1/2 space-y-5 text-lg md:text-xl leading-relaxed text-ink/75">
+            <p>
               Most "green" projects are a black box. You donate, you get a
               certificate, that's it. Not here. Every tree has an ID. A GPS
               location. Photos. A growth curve you can check live. Become a
               rewilder and see exactly what's growing.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 shrink-0 w-full lg:w-auto">
-              <ButtonLink href="#involved" variant="primary">
-                Become a rewilder
-              </ButtonLink>
-              <ButtonLink href="#approach" variant="secondary">
-                How it works
-              </ButtonLink>
-            </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      {/* Why RE:SILVA */}
-      <section className="bg-forest text-cream px-8 py-20 md:px-12 md:pt-28 md:py-28">
+      {/* Why RE:SILVA — forest bg */}
+      <section className="bg-forest text-mist px-8 py-20 md:px-12 md:pt-28 md:py-28">
         <h2
           className="font-extrabold leading-[0.88] tracking-tight"
-          style={{ fontSize: "clamp(2.6rem, 5.85vw, 5.85rem)" }}
+          style={{ fontSize: "clamp(2rem, 4.5vw, 4.5rem)" }}
         >
           Why RE:SILVA?
         </h2>
 
-        <div className="mt-14 md:mt-20">
-          {whyItems.map((item) => (
-            <div
-              key={item.title}
-              className="border-t-2 border-tan py-12 md:py-16 flex flex-col md:flex-row md:items-start gap-6 md:gap-14"
-            >
+        <div className="mt-14 md:mt-20 border-t-2 border-sage">
+          <div className="grid md:grid-cols-3 divide-y-2 md:divide-y-0 md:divide-x-2 divide-sage">
+            {whyItems.map((item) => (
               <div
-                className="text-tan shrink-0"
-                style={{ fontSize: "clamp(3rem, 5vw, 5rem)" }}
+                key={item.title}
+                className="py-12 md:py-14 flex flex-col gap-6 md:px-10 first:md:pl-0 last:md:pr-0"
               >
-                <FontAwesomeIcon icon={item.icon} fixedWidth />
-              </div>
-              <div>
-                <h3
-                  className="font-extrabold leading-[0.9] tracking-tight"
-                  style={{ fontSize: "clamp(1.5rem, 2.8vw, 3.4rem)" }}
+                <div
+                  className="text-sage"
+                  style={{ fontSize: "clamp(2rem, 3vw, 3rem)" }}
                 >
-                  {item.title}
-                </h3>
-                <p className="mt-5 text-cream/70 text-lg md:text-xl leading-relaxed max-w-2xl">
-                  {item.body}
-                </p>
+                  <FontAwesomeIcon icon={item.icon} fixedWidth />
+                </div>
+                <div>
+                  <h3
+                    className="font-extrabold leading-[0.9] tracking-tight"
+                    style={{ fontSize: "clamp(1.2rem, 2vw, 2.4rem)" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="mt-4 text-mist/70 text-lg leading-relaxed">
+                    {item.body}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
-          <div className="border-t-2 border-tan" />
+            ))}
+          </div>
+          <div className="border-t-2 border-sage" />
         </div>
       </section>
 
-      {/* Our Story — Intro */}
+      {/* Our Story — Intro — mist bg */}
       <section
         id="story"
-        className="bg-cream text-forest px-8 py-20 md:px-12 md:py-28"
+        className="bg-mist text-ink px-8 py-20 md:px-12 md:py-28"
       >
-        <p className="text-tan font-bold tracking-[0.22em] uppercase text-sm mb-10 md:mb-14">
+        <p className="text-sage font-bold tracking-[0.22em] uppercase text-sm mb-3">
           Our story
         </p>
         <div className="flex flex-col md:flex-row md:items-start gap-10 md:gap-16">
           <h2
-            className="font-extrabold leading-[0.88] tracking-tight md:w-1/2 shrink-0"
-            style={{ fontSize: "clamp(2.6rem, 5.85vw, 5.85rem)" }}
+            className="font-extrabold leading-[0.88] tracking-tight text-forest md:w-1/2 shrink-0"
+            style={{ fontSize: "clamp(2rem, 4.5vw, 4.5rem)" }}
           >
             How it started.
           </h2>
-          <div className="md:w-1/2 space-y-5 text-lg md:text-xl leading-relaxed text-forest/75">
+          <div className="md:w-1/2 space-y-5 text-lg md:text-xl leading-relaxed text-ink/75">
             <p>
               RE:SILVA didn't start in a boardroom. No pitch deck, no whiteboard
               covered in post-its.
@@ -188,15 +148,15 @@ export default function Home() {
               when you treat it with respect — and what it looks like when
               nobody does.
             </p>
-            <p className="font-semibold text-forest">That stuck with them.</p>
+            <p className="font-semibold text-ink">That stuck with them.</p>
           </div>
         </div>
       </section>
 
-      {/* Tristan */}
-      <section className="bg-forest text-cream">
+      {/* Tristan — forest bg */}
+      <section className="bg-forest text-mist">
         <div className="flex flex-col md:flex-row min-h-[85vh]">
-          <div className="relative min-h-[55vw] md:min-h-0 md:w-[40%]">
+          <div className="relative aspect-[3/4] md:aspect-auto md:min-h-0 md:w-[40%]">
             <Image
               src="/images/tristan.webp"
               alt="Tristan, co-founder"
@@ -208,12 +168,12 @@ export default function Home() {
           <div className="md:w-[60%] px-8 py-14 md:px-12 md:py-20 flex flex-col justify-between">
             <div>
               <h3
-                className="font-extrabold leading-[0.85] tracking-tight text-tan"
-                style={{ fontSize: "clamp(3.5rem, 7vw, 9rem)" }}
+                className="font-extrabold leading-[0.85] tracking-tight text-sage"
+                style={{ fontSize: "clamp(2.8rem, 5.5vw, 7rem)" }}
               >
                 Tristan
               </h3>
-              <div className="mt-8 space-y-4 text-base md:text-lg leading-relaxed text-cream/80">
+              <div className="mt-8 space-y-4 text-base md:text-lg leading-relaxed text-mist/80">
                 <p>
                   That lecture on food forests changed everything for me. I
                   suddenly understood: this isn't a hobby. This is a solution.
@@ -232,17 +192,17 @@ export default function Home() {
                 <p>It's not a mystery. It's biology. It can come back.</p>
               </div>
             </div>
-            <p className="mt-10 text-tan tracking-[0.18em] text-sm uppercase font-bold">
+            <p className="mt-10 text-sage tracking-[0.18em] text-sm uppercase font-bold">
               — Tristan, co-founder
             </p>
           </div>
         </div>
       </section>
 
-      {/* Yondi */}
-      <section className="bg-cream text-forest">
+      {/* Yondi — mist bg */}
+      <section className="bg-mist text-ink">
         <div className="flex flex-col md:flex-row-reverse min-h-[85vh]">
-          <div className="relative min-h-[55vw] md:min-h-0 md:w-[40%]">
+          <div className="relative aspect-[3/4] md:aspect-auto md:min-h-0 md:w-[40%]">
             <Image
               src="/images/yondi.webp"
               alt="Yondi, co-founder"
@@ -255,11 +215,11 @@ export default function Home() {
             <div>
               <h3
                 className="font-extrabold leading-[0.85] tracking-tight text-forest"
-                style={{ fontSize: "clamp(3.5rem, 7vw, 9rem)" }}
+                style={{ fontSize: "clamp(2.8rem, 5.5vw, 7rem)" }}
               >
                 Yondi
               </h3>
-              <div className="mt-8 space-y-4 text-base md:text-lg leading-relaxed text-forest/75">
+              <div className="mt-8 space-y-4 text-base md:text-lg leading-relaxed text-ink/75">
                 <p>
                   I'm 38. Good job in Amsterdam, life in order on paper. And
                   still that nagging feeling: I'm only ever taking.
@@ -277,26 +237,26 @@ export default function Home() {
                 <p>For me, RE:SILVA isn't a project. It's a life's work.</p>
               </div>
             </div>
-            <p className="mt-10 text-tan tracking-[0.18em] text-sm uppercase font-bold">
+            <p className="mt-10 text-sage tracking-[0.18em] text-sm uppercase font-bold">
               — Yondi, co-founder
             </p>
           </div>
         </div>
       </section>
 
-      {/* Our Approach */}
+      {/* Our Approach — forest bg */}
       <section
         id="approach"
-        className="bg-forest text-cream px-8 py-20 md:px-12 md:py-28"
+        className="bg-forest text-mist px-8 py-20 md:px-12 md:py-28"
       >
         <h2
           className="font-extrabold leading-[0.88] tracking-tight"
-          style={{ fontSize: "clamp(2.6rem, 5.85vw, 5.85rem)" }}
+          style={{ fontSize: "clamp(2rem, 4.5vw, 4.5rem)" }}
         >
           Our approach.
         </h2>
 
-        <div className="mt-8 md:mt-10 max-w-2xl space-y-4 text-lg md:text-xl leading-relaxed text-cream/75">
+        <div className="mt-8 md:mt-10 max-w-2xl space-y-4 text-lg md:text-xl leading-relaxed text-mist/75">
           <p>
             We restore depleted land. Sounds simple. It isn't — but it's not
             rocket science either.
@@ -311,43 +271,57 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-14 md:mt-20">
-          {approachSteps.map((step) => (
-            <div
-              key={step.number}
-              className="border-t-2 border-tan py-12 md:py-16 flex flex-col md:flex-row md:items-start gap-6 md:gap-14"
-            >
-              <span
-                className="font-extrabold text-tan shrink-0 leading-none"
-                style={{ fontSize: "clamp(3rem, 5vw, 5rem)" }}
+        <div className="mt-14 md:mt-20 border-t-2 border-sage">
+          <div className="grid md:grid-cols-4 divide-y-2 md:divide-y-0 md:divide-x-2 divide-sage">
+            {approachSteps.map((step) => (
+              <div
+                key={step.number}
+                className="py-12 md:py-14 flex flex-col gap-6 md:px-10 first:md:pl-0 last:md:pr-0"
               >
-                {step.number}
-              </span>
-              <div>
-                <h3
-                  className="font-extrabold leading-[0.9] tracking-tight"
-                  style={{ fontSize: "clamp(1.5rem, 2.8vw, 3.4rem)" }}
+                <span
+                  className="font-extrabold text-sage leading-none"
+                  style={{ fontSize: "clamp(2rem, 3vw, 3rem)" }}
                 >
-                  {step.title}
-                </h3>
-                <p className="mt-5 text-cream/70 text-lg md:text-xl leading-relaxed max-w-2xl">
-                  {step.body}
-                </p>
+                  {step.number}
+                </span>
+                <div>
+                  <h3
+                    className="font-extrabold leading-[0.9] tracking-tight"
+                    style={{ fontSize: "clamp(1.2rem, 2vw, 2.4rem)" }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p className="mt-4 text-mist/70 text-lg leading-relaxed">
+                    {step.body}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
-          <div className="border-t-2 border-tan" />
+            ))}
+          </div>
+          <div className="border-t-2 border-sage" />
         </div>
       </section>
 
-      {/* Get Involved */}
+      {/* Rewilding image break */}
+      <ParallaxSection src="/images/rewilding.webp">
+        <p
+          className="font-extrabold tracking-tight leading-none text-white [text-shadow:_0_2px_24px_rgba(0,0,0,0.5)]"
+          style={{ fontSize: "clamp(2.45rem, 6.3vw, 7.7rem)" }}
+        >
+          RE:SILVA
+          <br />
+          <span className="text-fern">Rewilding is the answer.</span>
+        </p>
+      </ParallaxSection>
+
+      {/* Get Involved — mist bg */}
       <section
         id="involved"
-        className="bg-cream text-forest px-8 py-20 md:px-12 md:py-28"
+        className="bg-mist text-ink px-8 py-20 md:px-12 md:py-28"
       >
         <h2
-          className="font-extrabold leading-[0.88] tracking-tight"
-          style={{ fontSize: "clamp(2.6rem, 5.85vw, 5.85rem)" }}
+          className="font-extrabold leading-[0.88] tracking-tight text-forest"
+          style={{ fontSize: "clamp(2rem, 4.5vw, 4.5rem)" }}
         >
           Get involved.
         </h2>
@@ -358,12 +332,12 @@ export default function Home() {
             <div className="pt-12 md:pt-16 pb-14 md:pb-20 md:pr-16 border-b-2 md:border-b-0 md:border-r-2 border-forest flex flex-col justify-between gap-8">
               <div>
                 <h3
-                  className="font-extrabold leading-[0.88] tracking-tight"
-                  style={{ fontSize: "clamp(2rem, 3.5vw, 4.5rem)" }}
+                  className="font-extrabold leading-[0.88] tracking-tight text-forest"
+                  style={{ fontSize: "clamp(1.6rem, 2.8vw, 3.6rem)" }}
                 >
                   For you.
                 </h3>
-                <div className="mt-6 space-y-4 text-lg leading-relaxed text-forest/75">
+                <div className="mt-6 space-y-4 text-lg leading-relaxed text-ink/75">
                   <p>
                     You don't need to be a climate scientist. You don't need to
                     run a company. You don't even need to know what a hectare is
@@ -382,9 +356,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <ButtonLink href="#" variant="primary">
-                  Become a rewilder
-                </ButtonLink>
+                <BecomeARewiIderButton variant="primary" />
               </div>
             </div>
 
@@ -392,12 +364,12 @@ export default function Home() {
             <div className="pt-12 md:pt-16 pb-14 md:pb-20 md:pl-16 flex flex-col justify-between gap-8">
               <div>
                 <h3
-                  className="font-extrabold leading-[0.88] tracking-tight"
-                  style={{ fontSize: "clamp(2rem, 3.5vw, 4.5rem)" }}
+                  className="font-extrabold leading-[0.88] tracking-tight text-forest"
+                  style={{ fontSize: "clamp(1.6rem, 2.8vw, 3.6rem)" }}
                 >
                   For companies.
                 </h3>
-                <div className="mt-6 space-y-4 text-lg leading-relaxed text-forest/75">
+                <div className="mt-6 space-y-4 text-lg leading-relaxed text-ink/75">
                   <p>
                     We don't sell offsets. We're building something, and you can
                     be part of it.
@@ -416,7 +388,10 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <ButtonLink href="mailto:hello@resilva.nl" variant="secondary">
+                <ButtonLink
+                  href="https://calendly.com/re-silva/30min"
+                  variant="secondary"
+                >
                   Get in touch
                 </ButtonLink>
               </div>

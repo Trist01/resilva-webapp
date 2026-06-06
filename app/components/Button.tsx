@@ -5,11 +5,11 @@ type Variant = "primary" | "secondary";
 const styles = (variant: Variant) =>
   [
     "inline-flex items-center justify-center",
-    "px-10 py-5 font-extrabold text-lg md:text-xl tracking-[0.25em] uppercase",
+    "px-8 py-4 font-extrabold text-lg md:text-xl tracking-[0.25em] uppercase",
     "transition-colors duration-200",
     variant === "primary"
-      ? "bg-tan text-cream hover:bg-forest"
-      : "bg-forest text-cream hover:bg-tan",
+      ? "bg-sage text-mist hover:bg-forest"
+      : "bg-forest text-mist hover:bg-sage",
   ].join(" ");
 
 // — For navigation (renders an <a> via Next.js Link)

@@ -3,6 +3,7 @@ import { Bricolage_Grotesque, Space_Grotesk } from "next/font/google";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./globals.css";
+import { RewiIderModalProvider } from "./components/RewiIderModal";
 
 config.autoAddCss = false;
 
@@ -34,7 +35,9 @@ export default function RootLayout({
       lang="en"
       className={`${bricolageGrotesque.variable} ${spaceGrotesk.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col antialiased">{children}</body>
+      <body className="min-h-full flex flex-col antialiased">
+        <RewiIderModalProvider>{children}</RewiIderModalProvider>
+      </body>
     </html>
   );
 }
