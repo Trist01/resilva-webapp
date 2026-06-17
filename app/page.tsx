@@ -73,7 +73,7 @@ const neverSayItems = [
 
 export default function Home() {
   return (
-    <main className="bg-mist text-ink flex flex-col">
+    <main className="bg-mist text-ink/75 flex flex-col">
       <HeroSection />
 
       {/* Our Story — Intro — mist bg */}
@@ -167,7 +167,7 @@ export default function Home() {
               when you treat it with respect. And what it looks like when nobody
               does.
             </p>
-            <p className="font-semibold text-ink">That stuck with them.</p>
+            <p className="font-semibold">That stuck with them.</p>
           </div>
         </div>
       </section>
@@ -222,7 +222,7 @@ export default function Home() {
       </section>
 
       {/* Yondi — mist bg */}
-      <section className="bg-mist text-ink">
+      <section className="bg-mist">
         <div className="flex flex-col md:flex-row-reverse min-h-[85vh]">
           <div className="relative aspect-[3/4] md:aspect-auto md:min-h-0 md:w-[40%]">
             <Image
@@ -241,7 +241,7 @@ export default function Home() {
               >
                 Yondi
               </h3>
-              <div className="mt-8 space-y-4 text-base md:text-lg leading-relaxed text-ink/75">
+              <div className="mt-8 space-y-4 text-base md:text-lg leading-relaxed">
                 <p>
                   I had a good job in Amsterdam, life in order on paper. And
                   still that nagging feeling: I&apos;m only ever taking.
@@ -414,10 +414,7 @@ export default function Home() {
       </section>
 
       {/* Get Involved — mist bg */}
-      <section
-        id="involved"
-        className="bg-mist text-ink py-20 pb-10 md:py-28 md:pb-12"
-      >
+      <section id="involved" className="bg-mist py-20 pb-10 md:py-28 md:pb-12">
         <h2
           className="font-extrabold leading-[0.88] tracking-tight text-forest px-8 md:px-12"
           style={{ fontSize: "clamp(2rem, 4.5vw, 4.5rem)" }}
@@ -439,7 +436,7 @@ export default function Home() {
                 >
                   Become a Rewilder.
                 </h3>
-                <div className="mt-6 space-y-4 text-lg leading-relaxed text-ink/75">
+                <div className="mt-6 space-y-4 text-lg leading-relaxed">
                   <p>
                     You don&apos;t need to be a climate scientist. You
                     don&apos;t need to run a company. You don&apos;t even need
@@ -474,7 +471,7 @@ export default function Home() {
                 >
                   Become a Restoration Partner.
                 </h3>
-                <div className="mt-6 space-y-4 text-lg leading-relaxed text-ink/75">
+                <div className="mt-6 space-y-4 text-lg leading-relaxed">
                   <p>
                     We don&apos;t sell offsets. We&apos;re building something,
                     and you can be part of it.
@@ -506,7 +503,7 @@ export default function Home() {
           <div className="border-t-2 border-forest" />
         </div>
       </section>
-      <footer className="bg-mist text-ink px-8 pb-10 md:px-12">
+      <footer className="bg-mist text-forest px-8 pb-10 md:px-12">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <Image
             src="/branding/resilva-logo-full.webp"
