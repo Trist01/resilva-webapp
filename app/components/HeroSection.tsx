@@ -33,7 +33,13 @@ export function HeroSection() {
       {/* Navigation */}
       <nav className="relative z-10 flex items-start justify-between px-8 py-7 md:px-12">
         <div>
-          <h1 className="text-4xl font-bold">RE:SILVA</h1>
+          <Image
+            src="/branding/resilva-text-logo-white-green.webp"
+            alt="RE:SILVA"
+            width={400}
+            height={91}
+            className="h-10 w-auto"
+          />
         </div>
         <div className="hidden md:flex items-center gap-10 font-bold tracking-[0.18em] lowercase lg:text-lg [text-shadow:_0_1px_6px_rgba(0,0,0,0.5)]">
           <Link
@@ -60,7 +66,7 @@ export function HeroSection() {
       {/* Hero content */}
       <section className="relative z-10 flex-1 flex flex-col px-8 pb-20 md:pb-14 md:px-12">
         <div className="flex-1 flex items-center">
-          <h2
+          <h1
             className="font-extrabold leading-[0.92] tracking-tight [text-shadow:_0_2px_20px_rgba(0,0,0,0.5)]"
             style={{ fontSize: "clamp(2.5rem, 4.5vw, 4.5rem)" }}
           >
@@ -69,7 +75,7 @@ export function HeroSection() {
             You follow them.
             <br />
             <span className="text-fern">Down to the roots.</span>
-          </h2>
+          </h1>
         </div>
 
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-10">

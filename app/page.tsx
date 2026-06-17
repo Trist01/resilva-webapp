@@ -509,7 +509,7 @@ export default function Home() {
       <footer className="bg-mist text-ink px-8 pb-10 md:px-12">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <Image
-            src="/branding/resilva-logo.webp"
+            src="/branding/resilva-logo-full.webp"
             alt="RE:SILVA"
             width={320}
             height={96}
