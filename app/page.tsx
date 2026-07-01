@@ -510,7 +510,7 @@ export default function Home() {
             alt="RE:SILVA"
             width={320}
             height={96}
-            className="h-30 w-auto"
+            className="w-30 h-auto"
           />
           <p className="text-sm">&copy; 2026 RE:SILVA. All rights reserved.</p>
         </div>
